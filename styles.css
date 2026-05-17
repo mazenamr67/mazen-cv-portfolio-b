@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: #00ffcc;
+}
+
+/* ── HERO ── */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #00ffcc, #ff00cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.motivation {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    opacity: 0.85;
+    line-height: 1.8;
+}
+
+/* ── PROFILE CARD (homepage) ── */
+.profile-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px 40px;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.profile-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00ffcc;
+    margin-bottom: 10px;
+}
+
+.profile-card h3 {
+    font-size: 1.3rem;
+    color: #00ffcc;
+    margin-bottom: 5px;
+}
+
+/* ── BUTTON ── */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #00ffcc;
+    color: black;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ff00cc;
+    color: white;
+}
+
+/* ── CV PAGE ── */
+.cv-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.cv-header {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.cv-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #00ffcc;
+    object-fit: cover;
+}
+
+.cv-header h2 {
+    font-size: 2rem;
+    color: #00ffcc;
+    margin-bottom: 5px;
+}
+
+.cv-header h3 {
+    font-size: 1.1rem;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+/* ── CONTROLS ── */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    background: #00ffcc;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #ff00cc;
+    color: white;
+}
+
+/* ── CV SECTIONS ── */
+.cv-section {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: 0.3s;
+}
+
+.cv-section h2 {
+    font-size: 1.5rem;
+    color: #00ffcc;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 8px;
+}
+
+/* ── TABLE ── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+/* ── LISTS ── */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background: rgba(0, 255, 204, 0.15);
+    border: 1px solid #00ffcc;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #00ffcc;
+    margin: 0;
+}
+
+/* ── FOOTER ── */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* ── LIGHT MODE ── */
+.light-mode {
+    background: #f0f0f0;
+    color: #222;
+}
+
+.light-mode header {
+    background: #fff;
+}
+
+.light-mode nav a {
+    color: #222;
+}
+
+.light-mode .cv-section {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .cv-header {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .profile-card {
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode footer {
+    background: #ddd;
+    color: #555;
+}
+
+.light-mode .skills-list li {
+    background: rgba(0, 255, 204, 0.1);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 600px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .cv-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .controls {
+        justify-content: center;
+    }
+}

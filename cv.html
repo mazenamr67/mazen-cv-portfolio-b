@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazen Amr - CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html" class="active">My CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cv-container">
+        <div class="cv-header">
+            <img src="profile.jpg" alt="Mazen Amr" class="cv-photo">
+            <div>
+                <h2>Mazen Amr</h2>
+                <h3>Front-End Developer</h3>
+                <p>📍 Leipzig • 📧 mazenamr6778@gmail.com • 🔗 linkedin.com/in/mazenamr</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button onclick="toggleSection('education')">📚 Education</button>
+            <button onclick="toggleSection('experience')">💼 Experience</button>
+            <button onclick="toggleSection('skills')">🛠 Skills</button>
+            <button onclick="changeTheme()">🌙 Toggle Theme</button>
+        </div>
+
+        <section id="education" class="cv-section">
+            <h2>Education</h2>
+            <table>
+                <tr><th>Degree</th><th>University</th><th>Year</th></tr>
+                <tr><td>Bachelor of Computer Science</td><td>Lancaster University Leipzig</td><td>2025</td></tr>
+            </table>
+        </section>
+
+        <section id="experience" class="cv-section">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Web Development Projects</strong> — Personal & Freelance Work</li>
+                <li><strong>Front-End Learning Projects</strong> — HTML, CSS, JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="skills" class="cv-section">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Git & GitHub</li>
+                <li>Responsive Web Design</li>
+                <li>Bash Scripting</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Current Time: <span id="datetime"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
