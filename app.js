@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initScrollProgressBar();
     loadPortfolioData();
-    // initPageTransition();   <-- DISABLED (was breaking CV page buttons)
+    initHeroTechStack();           // ← Added: Makes tech stack clickable
+    // initPageTransition();       // DISABLED (was breaking CV page buttons)
 });
 
 // ============================================================
@@ -609,6 +610,38 @@ function initMobileNav() {
     toggle.addEventListener('click', () => {
         links.classList.toggle('open');
         toggle.classList.toggle('open');
+    });
+}
+
+// ============================================================
+// NEW: Interactive Hero Tech Stack
+// ============================================================
+
+// new: Make hero-side tech items clickable - smooth scroll + highlight
+function initHeroTechStack() {
+    document.querySelectorAll('.hero-side-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const target = item.getAttribute('data-target');
+            let section = null;
+
+            if (target === 'skills') {
+                section = document.querySelector('#about') || document.querySelector('.about-section');
+            } else if (target === 'projects') {
+                section = document.querySelector('#projects') || document.querySelector('.projects-section');
+            }
+
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Highlight effect
+                section.style.transition = 'box-shadow 0.3s ease';
+                section.style.boxShadow = '0 0 0 3px rgba(0, 255, 204, 0.5)';
+
+                setTimeout(() => {
+                    section.style.boxShadow = 'none';
+                }, 1400);
+            }
+        });
     });
 }
 

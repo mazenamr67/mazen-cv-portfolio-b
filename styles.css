@@ -1102,6 +1102,13 @@ header.scrolled {
     border: 1px solid rgba(255, 0, 204, 0.2);
 }
 
+/* NEW: Intermediate language badge style */
+.language-badge.intermediate {
+    background: rgba(0, 255, 204, 0.12);
+    color: var(--accent);
+    border: 1px solid rgba(0, 255, 204, 0.25);
+}
+
 /* ============================================================
    ACHIEVEMENTS
 ============================================================ */
@@ -1456,4 +1463,53 @@ body {
 .section.reveal {
     opacity: 1 !important;
     transform: none !important;
+}
+
+/* ============================================================
+   HERO SIDE TECH STACK (Right side - Fixed)
+============================================================ */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-end;
+    z-index: 3;
+}
+
+.hero-side-item {
+    background: var(--glass);
+    border: 1px solid var(--border-accent);
+    color: var(--accent);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Space Mono', monospace;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.hero-side-item:hover {
+    background: rgba(0, 255, 204, 0.1);
+    border-color: var(--accent);
+    transform: translateX(-8px);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.25);
 }

@@ -6,104 +6,152 @@
     <meta name="description" content="Mazen Amr — Front-End Developer & AI Enthusiast. Google AI Assessment Phase 2 Portfolio.">
     <meta name="author" content="Mazen Amr">
     <meta property="og:title" content="Mazen Amr • Front-End Developer">
-    <meta property="og:description" content="Dynamic AI-assisted CV portfolio — Lancaster University Leipzig">
+    <meta property="og:description" content="Dynamic AI-assisted CV portfolio — Lancaster University Leipzig. Google AI Assessment Phase 2.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/mazenamr67/mazen-cv-portfolio-b">
+    <meta name="theme-color" content="#0a0a0f">
     <title>Mazen Amr • Front-End Developer</title>
 
-    <!-- new: Premium variable fonts for modern typographic feel -->
+    <!-- new: Premium variable fonts for modern typographic identity -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
+    <!-- new: Single shared stylesheet for all pages per assessment requirement -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="loading">
 
-    <!-- new: Page loader overlay shown while JS fetches and renders data -->
-    <div class="page-loader" id="page-loader">
+    <!-- ============================================================
+         PAGE LOADER
+         Displayed while app.js fetches and renders data.json
+    ============================================================ -->
+    <!-- new: Full-screen loader with double spinning rings shown until data loads -->
+    <div class="page-loader" id="page-loader" role="status" aria-label="Loading portfolio">
         <div class="loader-inner">
             <div class="loader-ring"></div>
-            <p class="loader-text">Loading Portfolio...</p>
+            <div class="loader-ring loader-ring--delay"></div>
+            <p class="loader-text">Loading Portfolio<span class="loader-dots">...</span></p>
         </div>
     </div>
 
-    <!-- new: Fixed navigation with glassmorphism effect and mobile hamburger -->
-    <header id="main-header">
-        <nav>
+    <!-- ============================================================
+         NAVIGATION
+         Fixed glassmorphism header with mobile hamburger
+    ============================================================ -->
+    <!-- new: Header gets .scrolled class from app.js on scroll for shrink effect -->
+    <header id="main-header" role="banner">
+        <nav aria-label="Main navigation">
             <div class="nav-container">
+
                 <!-- Logo -->
-                <a href="index.html" class="logo" aria-label="Home">
+                <a href="index.html" class="logo" aria-label="Mazen Amr — Home">
                     <span class="logo-bracket">[</span>
                     <span class="logo-text">MA</span>
                     <span class="logo-bracket">]</span>
                 </a>
 
-                <!-- Desktop Navigation -->
-                <ul class="nav-links" role="navigation" aria-label="Main navigation">
+                <!-- Desktop nav -->
+                <ul class="nav-links" id="nav-links" role="list">
                     <li><a href="index.html" class="nav-link active" data-text="Home">Home</a></li>
-                    <li><a href="cv.html" class="nav-link" data-text="My CV">My CV</a></li>
+                    <li><a href="cv.html"    class="nav-link"        data-text="My CV">My CV</a></li>
                 </ul>
 
-                <!-- new: Hamburger button for mobile navigation -->
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <!-- new: Hamburger — app.js toggles .open on click for mobile menu -->
+                <button
+                    class="nav-toggle"
+                    id="nav-toggle"
+                    aria-label="Toggle navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                 </button>
+
             </div>
         </nav>
     </header>
 
-    <!-- new: Full-screen cinematic hero with layered content -->
-    <section class="hero" id="hero" aria-label="Hero section">
+    <!-- ============================================================
+         HERO SECTION
+         Full-screen cinematic opener with layered depth
+    ============================================================ -->
+    <section class="hero" id="hero" aria-labelledby="hero-name">
 
-        <!-- new: Decorative grid overlay for depth -->
+        <!-- new: CSS grid overlay adds structural depth to background -->
         <div class="hero-grid" aria-hidden="true"></div>
 
-        <!-- new: Animated gradient orbs for atmospheric background -->
+        <!-- new: Three floating gradient orbs create atmospheric ambient glow -->
         <div class="orb orb-1" aria-hidden="true"></div>
         <div class="orb orb-2" aria-hidden="true"></div>
         <div class="orb orb-3" aria-hidden="true"></div>
 
+        <!-- new: Decorative corner accents for cinematic framing -->
+        <div class="hero-corner hero-corner--tl" aria-hidden="true"></div>
+        <div class="hero-corner hero-corner--tr" aria-hidden="true"></div>
+        <div class="hero-corner hero-corner--bl" aria-hidden="true"></div>
+        <div class="hero-corner hero-corner--br" aria-hidden="true"></div>
+
         <div class="hero-content">
             <div class="hero-text">
 
-                <!-- Location badge — filled by JS -->
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span id="hero-location" class="hero-eyebrow">Available for Work</span>
+                <!-- new: Location badge with sonar pulse animation, text filled by app.js -->
+                <div class="hero-badge" aria-label="Status">
+                    <span class="badge-dot"  aria-hidden="true"></span>
+                    <span class="badge-ring" aria-hidden="true"></span>
+                    <span id="hero-location" class="hero-eyebrow"></span>
                 </div>
 
-                <!-- new: Name rendered with gradient text class by JS -->
-                <h1 id="hero-name" class="hero-name" aria-label="Mazen Amr"></h1>
+                <!-- new: Hero name injected by app.js with gradient-text neon-pulse classes -->
+                <h1 id="hero-name" class="hero-name"></h1>
 
-                <!-- new: Cycling typewriter effect inserted by JS -->
-                <h2 id="hero-title" class="hero-title" aria-live="polite"></h2>
+                <!-- new: Cycling typewriter loops through role strings via app.js -->
+                <h2 id="hero-title" class="hero-title" aria-live="polite" aria-atomic="true"></h2>
 
-                <!-- new: Tagline fades in after typewriter via JS opacity transition -->
+                <!-- new: Tagline opacity starts at 0, fades in via app.js after typewriter -->
                 <p id="hero-tagline" class="hero-tagline"></p>
 
-                <!-- CTA Buttons -->
-                <div class="hero-cta" role="group" aria-label="Call to action">
+                <!-- CTA buttons — magnetic + ripple effects applied by app.js -->
+                <div class="hero-cta" role="group" aria-label="Primary actions">
                     <a href="cv.html" class="btn btn-primary">
                         <span>View Full CV</span>
-                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
                     </a>
                     <a href="#about" class="btn btn-secondary">
                         <span>Learn More</span>
-                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M12 5v14M5 12l7 7 7-7"/>
+                        </svg>
                     </a>
                 </div>
 
-                <!-- new: Scroll indicator animated arrow -->
+                <!-- new: Animated scroll indicator with pulsing line -->
                 <div class="scroll-indicator" aria-hidden="true">
                     <span class="scroll-line"></span>
                     <span class="scroll-label">Scroll</span>
                 </div>
 
             </div>
+
+            <!-- ============================================================
+                 UPDATED: Interactive tech stack (clickable)
+            ============================================================ -->
+            <div class="hero-side" aria-label="Technologies used">
+                <div class="hero-side-item" data-target="skills">HTML5</div>
+                <div class="hero-side-item" data-target="skills">CSS3</div>
+                <div class="hero-side-item" data-target="skills">JavaScript</div>
+                <div class="hero-side-item" data-target="projects">JSON</div>
+                <div class="hero-side-item" data-target="skills">Bash</div>
+                <div class="hero-side-item" data-target="projects">Git</div>
+            </div>
+
         </div>
 
-        <!-- new: Animated stats bar at bottom of hero filled by JS counters -->
+        <!-- new: Stats bar docked at bottom of hero, counters animated by app.js -->
         <div class="stats-section" aria-label="Key statistics">
             <div class="container">
                 <div id="stats-bar" class="stats-grid" role="list"></div>
@@ -112,104 +160,130 @@
 
     </section>
 
-    <!-- ============================================================ -->
-    <!-- ABOUT SECTION -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         ABOUT SECTION
+    ============================================================ -->
     <section id="about" class="section about-section" aria-labelledby="about-heading">
         <div class="container">
+
             <div class="section-header reveal">
                 <span class="section-number" aria-hidden="true">01</span>
                 <h2 class="section-title" id="about-heading">About Me</h2>
                 <div class="section-line" aria-hidden="true"></div>
             </div>
+
             <div class="about-grid">
-                <div class="about-text-col">
-                    <!-- new: About text injected dynamically from data.json -->
-                    <p id="about-text" class="about-text large-text reveal"></p>
+
+                <!-- new: About paragraph injected from data.json by app.js -->
+                <p id="about-text" class="about-text large-text reveal"></p>
+
+                <!-- new: Info cards alongside about text for visual balance -->
+                <div class="about-cards reveal" aria-label="Quick facts">
+                    <div class="about-card tilt-card">
+                        <div class="about-icon" aria-hidden="true">⚡</div>
+                        <p class="about-card-label">Assessment</p>
+                        <p class="about-card-value">Phase 2 — AI</p>
+                    </div>
+                    <div class="about-card tilt-card">
+                        <div class="about-icon" aria-hidden="true">🎓</div>
+                        <p class="about-card-label">University</p>
+                        <p class="about-card-value">Lancaster Leipzig</p>
+                    </div>
+                    <div class="about-card tilt-card">
+                        <div class="about-icon" aria-hidden="true">🏆</div>
+                        <p class="about-card-label">Phase 1 Score</p>
+                        <p class="about-card-value">90%</p>
+                    </div>
+                    <div class="about-card tilt-card">
+                        <div class="about-icon" aria-hidden="true">📍</div>
+                        <p class="about-card-label">Location</p>
+                        <p class="about-card-value">Leipzig, Germany</p>
+                    </div>
                 </div>
-                <div class="about-visual-col reveal">
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <div class="about-icon">⚡</div>
-                            <p class="about-card-label">Phase 2</p>
-                            <p class="about-card-value">AI-Assisted</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <div class="about-icon">🎓</div>
-                            <p class="about-card-label">University</p>
-                            <p class="about-card-value">Lancaster Leipzig</p>
-                        </div>
-                    </div>
-                    <div class="about-card">
-                        <div class="about-card-inner">
-                            <div class="about-icon">🏆</div>
-                            <p class="about-card-label">Phase 1 Score</p>
-                            <p class="about-card-value">90%</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- FEATURED PROJECTS -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         FEATURED PROJECTS
+    ============================================================ -->
     <section class="section projects-section" aria-labelledby="projects-heading">
         <div class="container">
+
             <div class="section-header reveal">
                 <span class="section-number" aria-hidden="true">02</span>
                 <h2 class="section-title" id="projects-heading">Featured Work</h2>
                 <div class="section-line" aria-hidden="true"></div>
             </div>
-            <!-- new: Projects injected dynamically from data.json highlighted projects -->
+
+            <!-- new: Highlighted project cards injected dynamically from data.json -->
             <div id="featured-projects" class="projects-grid" role="list"></div>
+
         </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- ACHIEVEMENTS -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         ACHIEVEMENTS
+    ============================================================ -->
     <section class="section achievements-section" aria-labelledby="achievements-heading">
         <div class="container">
+
             <div class="section-header reveal">
                 <span class="section-number" aria-hidden="true">03</span>
                 <h2 class="section-title" id="achievements-heading">Key Achievements</h2>
                 <div class="section-line" aria-hidden="true"></div>
             </div>
-            <!-- new: Achievements list injected dynamically from data.json -->
+
+            <!-- new: Achievement items injected dynamically from data.json -->
             <ul id="achievements-list" class="achievements-list" role="list"></ul>
+
         </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- FOOTER -->
-    <!-- ============================================================ -->
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
     <footer class="site-footer" role="contentinfo">
         <div class="container">
+
             <div class="footer-grid">
+
                 <div class="footer-brand">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="logo" aria-label="Mazen Amr — Home">
                         <span class="logo-bracket">[</span>
                         <span class="logo-text">MA</span>
                         <span class="logo-bracket">]</span>
                     </a>
                     <p class="footer-tagline">Building the future, one line at a time.</p>
                 </div>
-                <div class="footer-nav">
+
+                <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="index.html" class="footer-link">Home</a>
-                    <a href="cv.html" class="footer-link">My CV</a>
+                    <a href="cv.html"    class="footer-link">My CV</a>
+                </nav>
+
+                <div class="footer-info">
+                    <p class="footer-info-label">Assessment</p>
+                    <p class="footer-info-value">LZIFC005L — Phase 2</p>
+                    <p class="footer-info-label">Institution</p>
+                    <p class="footer-info-value">Lancaster University Leipzig</p>
                 </div>
+
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2026 <span id="footer-name"></span> &nbsp;•&nbsp; Google AI Assessment Phase 2 &nbsp;•&nbsp; Lancaster University Leipzig</p>
+                <p>
+                    &copy; 2026 <span id="footer-name"></span>
+                    &nbsp;•&nbsp; Google AI Front-End Developer Assessment
+                    &nbsp;•&nbsp; Lancaster University Leipzig
+                </p>
             </div>
+
         </div>
     </footer>
 
-    <!-- new: Single external JS file - no inline scripts per assessment rules -->
+    <!-- new: Single external JS file — no inline scripts per assessment rules -->
     <script src="app.js"></script>
 
 </body>

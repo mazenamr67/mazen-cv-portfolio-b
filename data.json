@@ -12,7 +12,7 @@
     {
       "degree": "Bachelor of Computer Science",
       "university": "Lancaster University Leipzig",
-      "year": "2024 – Present",
+      "year": "2026 – 2029",
       "grade": "Phase 1 Assessment: 90%",
       "modules": [
         "Computer Science Ecosystems",
@@ -29,63 +29,53 @@
       "title": "Front-End Developer",
       "company": "Freelance & Personal Projects",
       "period": "2024 – Present",
-      "description": "Designed and built responsive, accessible web applications entirely from scratch using semantic HTML5, modern CSS3, and vanilla JavaScript. Managed full project lifecycle from design to deployment using Git and GitHub."
+      "description": "Designed and built responsive, accessible web applications entirely from scratch using HTML, CSS, and JavaScript."
     },
     {
       "title": "AI-Assisted Developer",
-      "company": "Self-Directed Learning",
+      "company": "Self-directed Learning",
       "period": "2025 – Present",
-      "description": "Explored and documented AI-assisted development workflows using Claude and GitHub Copilot. Learned to critically evaluate AI output, integrate it with hand-written code, and reflect on the experience through structured LaTeX reports."
+      "description": "Explored AI-assisted development workflows using Claude and GitHub Copilot to accelerate delivery and improve code quality."
     }
   ],
 
   "skills": [
-    { "name": "HTML5 & CSS3",             "level": 90 },
-    { "name": "JavaScript (ES6+)",         "level": 80 },
-    { "name": "Git & GitHub",              "level": 85 },
-    { "name": "Responsive Design",         "level": 88 },
-    { "name": "Bash Scripting",            "level": 70 },
-    { "name": "AI-Assisted Development",   "level": 85 },
-    { "name": "JSON & APIs",               "level": 75 },
-    { "name": "LaTeX",                     "level": 65 }
+    { "name": "HTML5 & CSS3", "level": 92 },
+    { "name": "JavaScript (ES6+)", "level": 88 },
+    { "name": "Responsive Design", "level": 90 },
+    { "name": "Git & GitHub", "level": 85 },
+    { "name": "AI-Assisted Development", "level": 87 },
+    { "name": "JSON & APIs", "level": 80 },
+    { "name": "Bash Scripting", "level": 75 },
+    { "name": "LaTeX", "level": 70 }
   ],
 
   "projects": [
     {
-      "title": "CV Portfolio — Phase 1",
-      "description": "A fully handcrafted professional portfolio built from scratch with zero frameworks, zero libraries, and zero AI assistance. Features semantic HTML, custom CSS animations, vanilla JavaScript interactivity, a Bash analysis script, and a clean Git branching workflow. Scored 90% as a solo submission.",
-      "tech": ["HTML5", "CSS3", "JavaScript", "Bash", "Git", "GitHub"],
+      "title": "CV Portfolio Website — Phase 1",
+      "description": "A fully handcrafted professional portfolio built from scratch with no frameworks, no libraries, and no AI. Submitted as Phase 1 of the Google AI front-end developer assessment.",
+      "tech": ["HTML", "CSS", "JavaScript", "Bash", "Git"],
       "github": "github.com/mazenamr67/mazen-cv-portfolio",
       "highlight": true
     },
     {
       "title": "Dynamic CV Portfolio — Phase 2",
-      "description": "An AI-assisted rebuild of Phase 1 featuring a fully dynamic data layer driven by JSON, a particle universe background, cycling typewriter hero, 3D card tilt effects, animated skill bars, magnetic buttons, custom dual cursor, scroll-triggered reveals, and page transition overlays. Documented in a LaTeX reflection report.",
-      "tech": ["HTML5", "CSS3", "JavaScript", "JSON", "Claude AI", "Bash", "LaTeX", "GitHub"],
+      "description": "An enhanced, AI-assisted rebuild of the Phase 1 portfolio featuring dynamic JSON-driven content, immersive scroll animations, a typing effect hero section, and parallax depth layers.",
+      "tech": ["HTML", "CSS", "JavaScript", "JSON", "Claude AI", "Bash", "LaTeX"],
       "github": "github.com/mazenamr67/mazen-cv-portfolio-b",
       "highlight": true
     }
   ],
 
   "achievements": [
-    "Scored 90% on Assessment A as a solo submission",
-    "Competed individually against group teams of up to three members",
-    "Implemented full Git branching and pull request workflow independently",
-    "Built a dynamic JSON-driven web application with immersive visual effects",
-    "Documented AI-assisted development process in a structured LaTeX report"
+    "Scored 90% on Assessment A — top individual submission",
+    "Solo submission competing against group projects",
+    "Completed full Git branching and PR workflow independently"
   ],
 
   "languages": [
-    { "language": "Arabic",  "level": "Native"   },
-    { "language": "English", "level": "Fluent"   },
-    { "language": "German",  "level": "Beginner" }
-  ],
-
-  "meta": {
-    "assessment": "LZIFC005L Computer Science Ecosystems",
-    "phase": "Phase 2 — AI-Assisted Development",
-    "institution": "Lancaster University Leipzig",
-    "year": "2026",
-    "aiTools": ["Claude (Anthropic)", "GitHub Copilot"]
-  }
+    { "language": "Arabic", "level": "Native" },
+    { "language": "English", "level": "Fluent" },
+    { "language": "German", "level": "Intermediate" }
+  ]
 }
