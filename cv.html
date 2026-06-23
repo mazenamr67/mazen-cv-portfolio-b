@@ -3,67 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mazen Amr - CV</title>
+    <meta name="description" content="Mazen Amr — Full CV. Education, Experience, Skills, Projects and Contact. Google AI Assessment Phase 2.">
+    <meta name="author" content="Mazen Amr">
+    <meta property="og:title" content="Mazen Amr • Full CV">
+    <meta property="og:description" content="Dynamic AI-assisted CV — Lancaster University Leipzig. Google AI Assessment Phase 2.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0a0a0f">
+    <title>Mazen Amr • Full CV</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+
+<body class="loading">
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <div class="loader-ring loader-ring--delay"></div>
+            <p class="loader-text">Loading CV<span class="loader-dots">...</span></p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="main-header">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html" class="active">My CV</a></li>
-            </ul>
+            <div class="nav-container">
+                <a href="index.html" class="logo">[MA]</a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="cv.html" class="nav-link active">My CV</a></li>
+                </ul>
+
+                <button class="nav-toggle" id="nav-toggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <main class="cv-container">
-        <div class="cv-header">
-            <img src="profile.jpg" alt="Mazen Amr" class="cv-photo">
-            <div>
-                <h2>Mazen Amr</h2>
-                <h3>Front-End Developer</h3>
-                <p>📍 Leipzig • 📧 mazenamr6778@gmail.com • 🔗 linkedin.com/in/mazenamr</p>
+    <!-- CV Hero -->
+    <section class="cv-hero">
+        <div class="hero-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+
+        <div class="cv-hero-inner">
+
+            <!-- Back to Home (FORCED CLICKABLE) -->
+            <a href="index.html" target="_self" class="cv-back-link" 
+               style="pointer-events: auto; cursor: pointer; position: relative; z-index: 10;">
+                ← Back to Home
+            </a>
+
+            <h1 id="cv-name" class="hero-name gradient-text"></h1>
+            <p id="cv-title" class="cv-hero-title"></p>
+            <p id="cv-location" class="cv-location"></p>
+
+            <!-- Buttons (FORCED CLICKABLE) -->
+            <div class="cv-actions">
+                <a href="#contact-section" class="btn btn-primary" 
+                   style="pointer-events: auto; cursor: pointer; position: relative; z-index: 10;">
+                    Get In Touch →
+                </a>
+                <a href="index.html" target="_self" class="btn btn-secondary" 
+                   style="pointer-events: auto; cursor: pointer; position: relative; z-index: 10;">
+                    View Portfolio
+                </a>
             </div>
         </div>
+    </section>
 
-        <div class="controls">
-            <button onclick="toggleSection('education')">📚 Education</button>
-            <button onclick="toggleSection('experience')">💼 Experience</button>
-            <button onclick="toggleSection('skills')">🛠 Skills</button>
-            <button onclick="changeTheme()">🌙 Toggle Theme</button>
+    <!-- Education -->
+    <section class="section reveal visible">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div id="education-content" class="cv-cards-grid"></div>
         </div>
+    </section>
 
-        <section id="education" class="cv-section">
-            <h2>Education</h2>
-            <table>
-                <tr><th>Degree</th><th>University</th><th>Year</th></tr>
-                <tr><td>Bachelor of Computer Science</td><td>Lancaster University Leipzig</td><td>2025</td></tr>
-            </table>
-        </section>
+    <!-- Experience -->
+    <section class="section reveal visible">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+            <div id="experience-content"></div>
+        </div>
+    </section>
 
-        <section id="experience" class="cv-section">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>Web Development Projects</strong> — Personal & Freelance Work</li>
-                <li><strong>Front-End Learning Projects</strong> — HTML, CSS, JavaScript</li>
-            </ul>
-        </section>
+    <!-- Skills -->
+    <section class="section reveal visible">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div id="skills-content" class="skills-grid"></div>
+        </div>
+    </section>
 
-        <section id="skills" class="cv-section">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>HTML5, CSS3, JavaScript</li>
-                <li>Git & GitHub</li>
-                <li>Responsive Web Design</li>
-                <li>Bash Scripting</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Projects -->
+    <section class="section reveal visible">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div id="projects-content" class="projects-grid"></div>
+        </div>
+    </section>
 
-    <footer>
-        <p>Current Time: <span id="datetime"></span></p>
+    <!-- Languages -->
+    <section class="section reveal visible">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">Languages</h2>
+            </div>
+            <div id="languages-content" class="languages-grid"></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section reveal visible" id="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Contact</h2>
+            </div>
+            <div id="contact-content" class="contact-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 <span id="footer-name"></span> • Google AI Assessment Phase 2 • Lancaster University Leipzig</p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

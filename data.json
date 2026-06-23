@@ -1,0 +1,91 @@
+{
+  "name": "Mazen Amr",
+  "title": "Front-End Developer",
+  "tagline": "Building the future, one line of code at a time.",
+  "location": "Leipzig, Germany",
+  "email": "mazenamr6778@gmail.com",
+  "linkedin": "linkedin.com/in/mazenamr",
+  "github": "github.com/mazenamr67",
+  "about": "I am a front-end developer and Computer Science student at Lancaster University Leipzig with a passion for building clean, immersive, and purposeful web experiences. This portfolio represents my evolution from writing static HTML by hand in Phase 1 to architecting a fully dynamic, AI-assisted application in Phase 2 — loading all content from JSON, animating with JavaScript, and documenting the entire process in LaTeX. I believe great development is about more than working code — it is about craft, curiosity, and continuous learning.",
+
+  "education": [
+    {
+      "degree": "Bachelor of Computer Science",
+      "university": "Lancaster University Leipzig",
+      "year": "2024 – Present",
+      "grade": "Phase 1 Assessment: 90%",
+      "modules": [
+        "Computer Science Ecosystems",
+        "Web Development",
+        "Algorithms & Data Structures",
+        "Human-Computer Interaction",
+        "Software Engineering"
+      ]
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "Front-End Developer",
+      "company": "Freelance & Personal Projects",
+      "period": "2024 – Present",
+      "description": "Designed and built responsive, accessible web applications entirely from scratch using semantic HTML5, modern CSS3, and vanilla JavaScript. Managed full project lifecycle from design to deployment using Git and GitHub."
+    },
+    {
+      "title": "AI-Assisted Developer",
+      "company": "Self-Directed Learning",
+      "period": "2025 – Present",
+      "description": "Explored and documented AI-assisted development workflows using Claude and GitHub Copilot. Learned to critically evaluate AI output, integrate it with hand-written code, and reflect on the experience through structured LaTeX reports."
+    }
+  ],
+
+  "skills": [
+    { "name": "HTML5 & CSS3",             "level": 90 },
+    { "name": "JavaScript (ES6+)",         "level": 80 },
+    { "name": "Git & GitHub",              "level": 85 },
+    { "name": "Responsive Design",         "level": 88 },
+    { "name": "Bash Scripting",            "level": 70 },
+    { "name": "AI-Assisted Development",   "level": 85 },
+    { "name": "JSON & APIs",               "level": 75 },
+    { "name": "LaTeX",                     "level": 65 }
+  ],
+
+  "projects": [
+    {
+      "title": "CV Portfolio — Phase 1",
+      "description": "A fully handcrafted professional portfolio built from scratch with zero frameworks, zero libraries, and zero AI assistance. Features semantic HTML, custom CSS animations, vanilla JavaScript interactivity, a Bash analysis script, and a clean Git branching workflow. Scored 90% as a solo submission.",
+      "tech": ["HTML5", "CSS3", "JavaScript", "Bash", "Git", "GitHub"],
+      "github": "github.com/mazenamr67/mazen-cv-portfolio",
+      "highlight": true
+    },
+    {
+      "title": "Dynamic CV Portfolio — Phase 2",
+      "description": "An AI-assisted rebuild of Phase 1 featuring a fully dynamic data layer driven by JSON, a particle universe background, cycling typewriter hero, 3D card tilt effects, animated skill bars, magnetic buttons, custom dual cursor, scroll-triggered reveals, and page transition overlays. Documented in a LaTeX reflection report.",
+      "tech": ["HTML5", "CSS3", "JavaScript", "JSON", "Claude AI", "Bash", "LaTeX", "GitHub"],
+      "github": "github.com/mazenamr67/mazen-cv-portfolio-b",
+      "highlight": true
+    }
+  ],
+
+  "achievements": [
+    "Scored 90% on Assessment A as a solo submission",
+    "Competed individually against group teams of up to three members",
+    "Implemented full Git branching and pull request workflow independently",
+    "Built a dynamic JSON-driven web application with immersive visual effects",
+    "Documented AI-assisted development process in a structured LaTeX report"
+  ],
+
+  "languages": [
+    { "language": "Arabic",  "level": "Native"   },
+    { "language": "English", "level": "Fluent"   },
+    { "language": "German",  "level": "Beginner" }
+  ],
+
+  "meta": {
+    "assessment": "LZIFC005L Computer Science Ecosystems",
+    "phase": "Phase 2 — AI-Assisted Development",
+    "institution": "Lancaster University Leipzig",
+    "year": "2026",
+    "aiTools": ["Claude (Anthropic)", "GitHub Copilot"]
+  }
+}

@@ -1,19 +1,75 @@
 #!/bin/bash
+# ============================================================
+# Mazen Amr — Assessment B Bash Script
+# ============================================================
 
-FILE="cv.html"
+OUTPUT_FILE="Mazen_bash_report.txt"
+DIVIDER="============================================================"
 
-echo "Checking $FILE for HTML tags"
+HTML_INDEX=$(grep -c 'new:' index.html 2>/dev/null || echo 0)
+HTML_CV=$(grep -c 'new:' cv.html 2>/dev/null || echo 0)
+CSS_COUNT=$(grep -c 'new:' styles.css 2>/dev/null || echo 0)
+JS_COUNT=$(grep -c 'new:' app.js 2>/dev/null || echo 0)
+
+TOTAL=$((HTML_INDEX + HTML_CV + CSS_COUNT + JS_COUNT))
+
+echo "$DIVIDER"
+echo " MAZEN AMR — ASSESSMENT B NEW LEARNING COMMENT REPORT"
+echo " LZIFC005L Computer Science Ecosystems — Phase 2"
+echo " Generated: $(date '+%d %B %Y at %H:%M:%S')"
+echo "$DIVIDER"
 echo ""
+echo " File-by-File Breakdown:"
+echo ""
+printf "  %-25s → %s new: comments\n" "index.html" "$HTML_INDEX"
+printf "  %-25s → %s new: comments\n" "cv.html" "$HTML_CV"
+printf "  %-25s → %s new: comments\n" "styles.css" "$CSS_COUNT"
+printf "  %-25s → %s new: comments\n" "app.js" "$JS_COUNT"
+echo ""
+echo "$DIVIDER"
+echo ""
+echo " TOTAL NEW LEARNING COMMENTS: $TOTAL"
+echo ""
+echo "$DIVIDER"
+echo ""
+echo " Summary:"
+echo " Each 'new:' comment represents a concept, technique, or API"
+echo " that was newly learned or implemented during Assessment B."
+echo ""
+echo " A total of $TOTAL new learning moments were documented across"
+echo " the project, showing clear growth from Assessment A."
+echo ""
+echo "$DIVIDER"
 
-echo "div tags: $(grep -c '<div' $FILE)"
-echo "img tags: $(grep -c '<img' $FILE)"
-echo "a links: $(grep -c '<a ' $FILE)"
-echo "h1 tags: $(grep -c '<h1' $FILE)"
-echo "h2 tags: $(grep -c '<h2' $FILE)"
-echo "h3 tags: $(grep -c '<h3' $FILE)"
-echo "h4 tags: $(grep -c '<h4' $FILE)"
-echo "h5 tags: $(grep -c '<h5' $FILE)"
-echo "h6 tags: $(grep -c '<h6' $FILE)"
+# Save to file
+echo "$DIVIDER" > "$OUTPUT_FILE"
+echo " MAZEN AMR — ASSESSMENT B NEW LEARNING COMMENT REPORT" >> "$OUTPUT_FILE"
+echo " LZIFC005L Computer Science Ecosystems — Phase 2" >> "$OUTPUT_FILE"
+echo " Generated: $(date '+%d %B %Y at %H:%M:%S')" >> "$OUTPUT_FILE"
+echo "$DIVIDER" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo " File-by-File Breakdown:" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+printf "  %-25s → %s new: comments\n" "index.html" "$HTML_INDEX" >> "$OUTPUT_FILE"
+printf "  %-25s → %s new: comments\n" "cv.html" "$HTML_CV" >> "$OUTPUT_FILE"
+printf "  %-25s → %s new: comments\n" "styles.css" "$CSS_COUNT" >> "$OUTPUT_FILE"
+printf "  %-25s → %s new: comments\n" "app.js" "$JS_COUNT" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo "$DIVIDER" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo " TOTAL NEW LEARNING COMMENTS: $TOTAL" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo "$DIVIDER" >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo " Summary:" >> "$OUTPUT_FILE"
+echo " Each 'new:' comment represents a concept, technique, or API" >> "$OUTPUT_FILE"
+echo " that was newly learned or implemented during Assessment B." >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo " A total of $TOTAL new learning moments were documented across" >> "$OUTPUT_FILE"
+echo " the project, showing clear growth from Assessment A." >> "$OUTPUT_FILE"
+echo "" >> "$OUTPUT_FILE"
+echo "$DIVIDER" >> "$OUTPUT_FILE"
 
 echo ""
-echo "done"
+echo " Report saved to: $OUTPUT_FILE"
+echo "$DIVIDER"

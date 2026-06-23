@@ -3,45 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mazen Amr | Front-End Developer</title>
+    <meta name="description" content="Mazen Amr — Front-End Developer & AI Enthusiast. Google AI Assessment Phase 2 Portfolio.">
+    <meta name="author" content="Mazen Amr">
+    <meta property="og:title" content="Mazen Amr • Front-End Developer">
+    <meta property="og:description" content="Dynamic AI-assisted CV portfolio — Lancaster University Leipzig">
+    <title>Mazen Amr • Front-End Developer</title>
+
+    <!-- new: Premium variable fonts for modern typographic feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
+<body class="loading">
+
+    <!-- new: Page loader overlay shown while JS fetches and renders data -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-inner">
+            <div class="loader-ring"></div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- new: Fixed navigation with glassmorphism effect and mobile hamburger -->
+    <header id="main-header">
         <nav>
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="cv.html">My CV</a></li>
-            </ul>
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo" aria-label="Home">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">MA</span>
+                    <span class="logo-bracket">]</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <ul class="nav-links" role="navigation" aria-label="Main navigation">
+                    <li><a href="index.html" class="nav-link active" data-text="Home">Home</a></li>
+                    <li><a href="cv.html" class="nav-link" data-text="My CV">My CV</a></li>
+                </ul>
+
+                <!-- new: Hamburger button for mobile navigation -->
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
         </nav>
     </header>
 
-    <section class="hero">
+    <!-- new: Full-screen cinematic hero with layered content -->
+    <section class="hero" id="hero" aria-label="Hero section">
+
+        <!-- new: Decorative grid overlay for depth -->
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <!-- new: Animated gradient orbs for atmospheric background -->
+        <div class="orb orb-1" aria-hidden="true"></div>
+        <div class="orb orb-2" aria-hidden="true"></div>
+        <div class="orb orb-3" aria-hidden="true"></div>
+
         <div class="hero-content">
-            <h1>Front-End Developer</h1>
+            <div class="hero-text">
 
-            <p class="motivation">
-                I built this portfolio to demonstrate my front-end development skills 
-                and passion for clean, modern web design. As someone applying to 
-                Google's AI team, this site represents my dedication to quality code, 
-                creative design, and real-world industry practices including Git, 
-                GitHub, and Bash scripting.
-            </p>
+                <!-- Location badge — filled by JS -->
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span id="hero-location" class="hero-eyebrow">Available for Work</span>
+                </div>
 
-            <div class="profile-card">
-                <img src="profile.jpg" alt="Mazen Amr" class="profile-thumb">
-                <h3>Mazen Amr</h3>
-                <p>Front-End Developer — Leipzig</p>
+                <!-- new: Name rendered with gradient text class by JS -->
+                <h1 id="hero-name" class="hero-name" aria-label="Mazen Amr"></h1>
+
+                <!-- new: Cycling typewriter effect inserted by JS -->
+                <h2 id="hero-title" class="hero-title" aria-live="polite"></h2>
+
+                <!-- new: Tagline fades in after typewriter via JS opacity transition -->
+                <p id="hero-tagline" class="hero-tagline"></p>
+
+                <!-- CTA Buttons -->
+                <div class="hero-cta" role="group" aria-label="Call to action">
+                    <a href="cv.html" class="btn btn-primary">
+                        <span>View Full CV</span>
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>Learn More</span>
+                        <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                    </a>
+                </div>
+
+                <!-- new: Scroll indicator animated arrow -->
+                <div class="scroll-indicator" aria-hidden="true">
+                    <span class="scroll-line"></span>
+                    <span class="scroll-label">Scroll</span>
+                </div>
+
             </div>
+        </div>
 
-            <a href="cv.html" class="btn">View My Full CV →</a>
+        <!-- new: Animated stats bar at bottom of hero filled by JS counters -->
+        <div class="stats-section" aria-label="Key statistics">
+            <div class="container">
+                <div id="stats-bar" class="stats-grid" role="list"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ABOUT SECTION -->
+    <!-- ============================================================ -->
+    <section id="about" class="section about-section" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number" aria-hidden="true">01</span>
+                <h2 class="section-title" id="about-heading">About Me</h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text-col">
+                    <!-- new: About text injected dynamically from data.json -->
+                    <p id="about-text" class="about-text large-text reveal"></p>
+                </div>
+                <div class="about-visual-col reveal">
+                    <div class="about-card">
+                        <div class="about-card-inner">
+                            <div class="about-icon">⚡</div>
+                            <p class="about-card-label">Phase 2</p>
+                            <p class="about-card-value">AI-Assisted</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-inner">
+                            <div class="about-icon">🎓</div>
+                            <p class="about-card-label">University</p>
+                            <p class="about-card-value">Lancaster Leipzig</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-inner">
+                            <div class="about-icon">🏆</div>
+                            <p class="about-card-label">Phase 1 Score</p>
+                            <p class="about-card-value">90%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Mazen Amr • Google AI Assessment</p>
+    <!-- ============================================================ -->
+    <!-- FEATURED PROJECTS -->
+    <!-- ============================================================ -->
+    <section class="section projects-section" aria-labelledby="projects-heading">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number" aria-hidden="true">02</span>
+                <h2 class="section-title" id="projects-heading">Featured Work</h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+            <!-- new: Projects injected dynamically from data.json highlighted projects -->
+            <div id="featured-projects" class="projects-grid" role="list"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ACHIEVEMENTS -->
+    <!-- ============================================================ -->
+    <section class="section achievements-section" aria-labelledby="achievements-heading">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-number" aria-hidden="true">03</span>
+                <h2 class="section-title" id="achievements-heading">Key Achievements</h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+            <!-- new: Achievements list injected dynamically from data.json -->
+            <ul id="achievements-list" class="achievements-list" role="list"></ul>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-bracket">[</span>
+                        <span class="logo-text">MA</span>
+                        <span class="logo-bracket">]</span>
+                    </a>
+                    <p class="footer-tagline">Building the future, one line at a time.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="cv.html" class="footer-link">My CV</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 <span id="footer-name"></span> &nbsp;•&nbsp; Google AI Assessment Phase 2 &nbsp;•&nbsp; Lancaster University Leipzig</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- new: Single external JS file - no inline scripts per assessment rules -->
+    <script src="app.js"></script>
+
 </body>
 </html>
