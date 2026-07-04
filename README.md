@@ -15,6 +15,11 @@ For Phase 2, I rebuilt the portfolio as a dynamic web application. All content i
 
 All new code and techniques added in Phase 2 are marked with // new: or <!-- new: --> comments.
 
+AI Tools Used
+
+- Claude (Anthropic) - main tool used throughout the project for generating code, fixing bugs, explaining unfamiliar concepts, and reviewing my work.
+- Grok (xAI) - used early on to get initial project structure ideas and to double-check some of the code Claude produced.
+
 Main Features Added in Phase 2
 
 - All content loads dynamically from data.json
@@ -39,16 +44,16 @@ Technologies Used
 Project Structure
 
 mazen-ai-cv-portfolio/
-├── index.html
-├── cv.html
-├── app.js
-├── styles.css
-├── data.json
-├── mazen_amr_bash.sh
-├── Mazen_bash_report.txt
-├── README.md
-├── screenshots/
-└── assets/
+- index.html
+- cv.html
+- app.js
+- styles.css
+- data.json
+- mazen_amr_bash.sh
+- Mazen_bash_report.txt
+- README.md
+- screenshots/
+- assets/
 
 How to View the Project
 
@@ -77,4 +82,4 @@ Mazen Amr
 Computer Science Student
 Lancaster University Leipzig
 
-Google AI Front-End Developer Assessment — Phase 2
+Google AI Front-End Developer Assessment - Phase 2
